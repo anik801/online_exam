@@ -9,7 +9,7 @@ export default function Questionnaire() {
   const [score, setScore] = useState(null);
 
   useEffect(() => {
-    loadQuestionsFromCSV("/questions.csv").then(setQuestions);
+    loadQuestionsFromCSV(import.meta.env.BASE_URL + "questions.csv").then(setQuestions);
   }, []);
 
   const handleChange = (qIndex, value) => {
